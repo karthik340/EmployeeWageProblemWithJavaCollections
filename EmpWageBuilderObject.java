@@ -1,5 +1,5 @@
 import java.util.*; 
-public class calculateEmployeeWageUC8{
+public class EmpWageBuilderObject{
 		public final int isFullTime = 1;
 		public final int isPartTime = 2;
 		public int totalEmpHrs=0;
@@ -8,7 +8,7 @@ public class calculateEmployeeWageUC8{
 		private final int maxHrsInMonth;		
 		private int totalSalary=0;
 		private int wagePerHour;
-		calculateEmployeeWageUC8(String companyName, int wagePerHour, int numWorkingDays, int maxHrsInMonth)
+		EmpWageBuilderObject(String companyName, int wagePerHour, int numWorkingDays, int maxHrsInMonth)
 		{
 		this.companyName=companyName;	
 		this.wagePerHour=wagePerHour;
@@ -49,8 +49,11 @@ public class calculateEmployeeWageUC8{
 		}
 	public static void main(String[] args) {
 		
-		calculateEmployeeWageUC8 john = new calculateEmployeeWageUC8("ford",40,25,110);
-		System.out.println("total salary"+john.findSalary());
-		}
+		EmpWageBuilderObject dMart = new EmpWageBuilderObject("ford",20,2,10);
+		EmpWageBuilderObject reliance = new EmpWageBuilderObject("Reliance",10,45,20);
+		dMart.findSalary();
+		System.out.println(dMart);
+		reliance.findSalary();
+		System.out.println(reliance);
+	}
 }
-
